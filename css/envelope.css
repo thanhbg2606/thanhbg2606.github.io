@@ -198,11 +198,22 @@
 /* Responsive Envelope */
 @media (max-width: 650px) {
   .envelope-wrapper {
-    height: 250px;
+    height: 280px; /* Tăng chút chiều cao phong bì để tờ giấy bên trong to hơn */
+  }
+
+  .letter {
+    padding: 15px; /* Giảm đệm lề (padding) để nhường diện tích cho chữ */
+  }
+
+  .text-content h2 {
+    font-size: 20px; /* Thu nhỏ tiêu đề */
+    margin-bottom: 8px;
   }
 
   .text-content p {
-    font-size: 15px;
+    font-size: 13.5px; /* Thu nhỏ chữ đoạn văn */
+    margin: 6px 0; /* Giảm khoảng cách thừa giữa các dòng */
+    line-height: 1.4;
   }
 
   @keyframes slideOut {
