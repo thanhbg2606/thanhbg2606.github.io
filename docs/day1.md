@@ -1,56 +1,64 @@
-# 🚀 Ngày 1: Nhập Môn Lập Trình Web & Xây Dựng Khung Xương (HTML)
+# 🚀 Ngày 1: Nhập Môn Lập Trình Web - Đặt Những Viên Gạch Đầu Tiên (HTML)
 
-Chào mừng bạn đến với ngày đầu tiên trong hành trình 10 ngày tự tay tạo ra một tấm thiệp điện tử vô cùng sinh động! Hôm nay, chúng ta sẽ bắt đầu từ con số 0 tròn trĩnh: Cài đặt công cụ, hiểu cách thế giới Web hoạt động và tự tay viết những dòng Code đầu tiên.
+Chào em, buổi học đầu tiên này, anh sẽ hướng dẫn em đi từ những khái niệm căn bản nhất của lập trình Web: hiểu cấu trúc nền tảng, cài đặt công cụ và tự viết ra những dòng code đầu tiên.
 
-## 1. Chuẩn Bị Hành Trang (Cài Đặt Công Cụ)
-
-Để viết code, chúng ta cần một phần mềm chuyên dụng soạn thảo văn bản gọi là **Code Editor** (trình chỉnh sửa mã nguồn). Trình duyệt (Chrome, Safari, Edge) sẽ đóng vai trò là "chiếc kính lúp" để đọc và hiển thị những dòng code đó thành hình ảnh.
-
-### Bước 1.1: Cài đặt Visual Studio Code (VS Code)
-VS Code là công cụ viết code miễn phí, phổ biến nhất thế giới do Microsoft phát triển.
-* **Tải về:** Bạn truy cập trang web [https://code.visualstudio.com/](https://code.visualstudio.com/)
-* **Cài đặt:** Bấm tải về bản dành cho máy tính của bạn (Windows hoặc Mac). Sau khi tải xong, nháy đúp chuột vào file vừa tải và cứ bấm "Next" cho đến khi hoàn tất.
-
-### Bước 1.2: Cài đặt phần mở rộng (Extension) "Live Server"
-"Live Server" là một tính năng phép thuật giúp trang web của bạn tự động cập nhật ngay lập tức mỗi khi bạn bấm lưu sửa code, mà không cần phải thủ công F5 (Tải lại) trình duyệt báo cáo.
-
-* Mở VS Code lên.
-* Nhìn sang cột chứa biểu tượng bên trái, click vào ô vuông xếp hình (hoặc bấm tổ hợp phím `Ctrl + Shift + X` trên Windows / `Cmd + Shift + X` trên Mac). Đây là kho tiện ích (Extensions).
-* Gõ chữ `Live Server` vào ô tìm kiếm.
-* Bạn sẽ thấy công cụ có biểu tượng hình sóng wifi màu tím của tác giả Ritwick Dey. Bấm nút **Install** (Cài đặt).
+Mục tiêu cốt lõi của hôm nay là sử dụng **HTML** để xây dựng bộ khung xương cứng cho tấm thiệp.
 
 ---
 
-## 2. Các Khái Niệm Cơ Bản Phải Biết
+## 🌻 Phân Vùng Kiến Thức: Web hoạt động như thế nào?
 
-Trước khi gõ code, hãy hiểu chúng ta đang làm gì:
+Để tạo nên một trang web hoàn chỉnh, chúng ta cần 3 thành phần (ngôn ngữ) phối hợp với nhau. Hãy hình dung việc làm web giống hệt như **Xây Một Ngôi Nhà**:
 
-* **Trang web là gì?** Trang web giống như một căn nhà.
-    * **HTML (HyperText Markup Language):** Là gạch, xi măng, cột trụ. Nó xây dựng nên bộ khung xương và Nội Dung của căn nhà (Đâu là cửa, đâu là phòng làm khách).
-    * **CSS (Cascading Style Sheets):** Là sơn tường, rèm cửa, nội thất. Nó làm căn nhà đẹp hơn (Màu đỏ, rèm che, căn giữa màn hình...).
-    * **JavaScript (JS):** Là điện, nước, các công tắc thông minh. Nó làm căn nhà hoạt động được (Bấm vào thì hộp thư mở ra, nhạc phát lên).
+1. **HTML (HyperText Markup Language - Nền tảng cấu trúc):**
+   Tương đương với gạch, xi măng, kết cấu của ngôi nhà. HTML quyết định ngôi nhà này có bao nhiêu phòng, đâu là cửa, đâu là tường. Trong trang web, nó tạo ra bố cục chứa văn bản, nút bấm, hình ảnh.
+   👉 *Hôm nay chúng ta chỉ dùng HTML để tạo bộ khung.*
 
-Ngày hôm nay, chúng ta **chỉ tập trung vào HTML** xây khung xương thôi nhé!
+2. **CSS (Cascading Style Sheets - Lớp sơn trang trí):**
+   Nếu chỉ có HTML, "ngôi nhà" của em sẽ như một bản vẽ thô đen trắng. CSS đóng vai trò là kiến trúc sư nội thất, nhận nhiệm vụ tô màu, căn lề, tạo bo góc, đổ bóng. Nó biến trang web thô cứng thành một giao diện lộng lẫy.
 
-* **Thẻ (Tag) trong HTML là gì?**
-    * HTML sử dụng các dấu ngoặc nhọn `< >` để chứa các lệnh, gọi là **Thẻ**.
-    * Hầu hết mọi thứ tồn tại theo cặp: Một thẻ Mở `<...>` và Một thẻ Đóng `</...>` (có dấu gạch chéo).
-    * _Ví dụ:_ Để tạo một đoạn văn bản, ta dùng thẻ `p` (viết tắt của paragraph): `<p>Xin chào thế giới!</p>`
+3. **JavaScript (JS - Hệ thống điều khiển):**
+   Ngôi nhà đẹp nhưng phải có điện nước để sử dụng. JavaScript chính là "bộ não" điều khiển. Nó giúp trang web có thể tương tác (Ví dụ: Khi em click chuột thì lá thư lật tung ra; bấm nút thì bài nhạc vang lên).
+
+> 💡 **Tóm tắt:** HTML là Khung xương, CSS là Lớp da trang trí, JavaScript là Hệ thần kinh điều khiển.
 
 ---
 
-## 3. Thực Hành: Tạo Dự Án & Chạy Code Đầu Tiên
+## 🛠 Thực Hành: Cài Đặt Môi Trường Lập Trình
 
-### Bước 3.1: Tạo thư mục chứa dự án
-* Tắt VS Code đi. Ra ngoài màn hình nền máy tính (Desktop), nhấp chuột phải -> Chọn **New Folder** (Tạo thư mục mới). Đặt tên nó là `Thiep-Dien-Tu` (Không nên xếp khoảng trắng, không dấu).
-* Mở thư mục đó ra. Nhấp chuột phải vào khoảng không bên trong, chọn **Open with Code** (hoặc mở VS Code lên, chọn File -> Open Folder -> chọn đến thư mục `Thiep-Dien-Tu` vừa tạo).
+Để viết code hiệu quả, lập trình viên không dùng Word hay Notepad, mà dùng công cụ chuyên dụng gọi là **Code Editor**. Phần mềm phổ biến nhất, nhẹ và hoàn toàn miễn phí là **Visual Studio Code (VS Code)**.
 
-### Bước 3.2: Tạo file HTML đầu tiên
-* Trong bảng điều khiển bên trái của VS Code (vùng Explorer), rê chuột vào vùng trống, click chuột phải chọn **New File**.
-* Đặt tên file là **`index.html`** và ấn Enter. (`index` là tên quy chuẩn cho trang chính của một website giống như "Cửa chính" của căn nhà).
+### Bước 1: Trình soạn thảo VS Code
+* **Cài đặt:** Em truy cập [https://code.visualstudio.com/](https://code.visualstudio.com/), tải bộ cài về và cài đặt theo các bước mặc định (Cứ nhấn Next cho đến khi Finish).
 
-### Bước 3.3: Viết bộ khung chuẩn của HTML
-Đừng hoảng sợ bởi mớ chữ dưới đây, hãy gõ dấu chấm than `!` trong file `index.html` và bấm phím `Tab` (hoặc `Enter`). VS Code sẽ tự động sinh ra một bộ khung chuẩn như sau:
+### Bước 2: Bổ sung tiện ích (Extensions)
+VS Code có một kho "vũ khí" mở rộng để hỗ trợ gõ code nhanh hơn. Mở phần mềm VS Code, nhấn vào biểu tượng **4 ô vuông xếp hình** bên trái (hoặc `Ctrl + Shift + X`). Tìm và cài đặt 3 tiện ích sau:
+
+1. **Live Server (Tác giả: Ritwick Dey):**
+   * *Tác dụng:* Mỗi lần gõ code xong, bình thường em phải tự F5 trình duyệt để xem kết quả. Live Server giúp trình duyệt *tự động cập nhật* ngay khoảnh khắc em vừa bấm Lưu file (`Ctrl + S`).
+   * ⚠️ **Lưu ý cực kỳ quan trọng:** Live Server chỉ phát hiện thay đổi khi em **Lưu file** (Save). Nếu em chỉ gõ mà không lưu, trình duyệt sẽ không bao giờ cập nhật cái mới đâu nhé!
+2. **Material Icon Theme:**
+   * *Tác dụng:* Đổi giao diện các icon của thư mục/file trở nên sinh động, trực quan và dễ nhìn hơn, giúp quản lý kho project dễ dàng.
+3. **Prettier - Code formatter:**
+   * *Tác dụng:* Công cụ tự động dọn dẹp, căn lề thẳng hàng, giúp đoạn code của em luôn gọn gàng và chuẩn format.
+
+### Bước 3: Khởi tạo Project (Thư mục dự án)
+* Quay ra màn hình Desktop, tạo một thư mục mới đặt tên là `Thiep-Dien-Tu` (Lưu ý: Không dùng tiếng Việt có dấu và dấu khoảng trắng trong tên file/thư mục lập trình).
+* Vào VS Code, chọn **File -> Open Folder...** và trỏ đến thư mục vừa tạo. Toàn bộ tài nguyên ảnh, âm thanh, code của dự án sẽ nằm gọn trong này.
+
+---
+
+## 🏗 Thực Hành: Viết Những Dòng Code Đầu Tiên
+
+Một trang web bắt đầu bằng tệp định dạng `.html`.
+
+### Bước 1: Khởi tạo file giao diện chính
+* Trong VS Code, nhấp chuột phải vào không gian trống bên dải Explorer trái, chọn **New File** và đặt tên là **`index.html`** (index luôn là cổng vào mặc định của một hệ thống web).
+
+### Bước 2: Khung chuẩn HTML5
+Không cần nhớ toàn bộ cú pháp loằng ngoằng.
+* Click vào bên trong file `index.html`.
+* Gõ duy nhất dấu chấm than **`!`** và ấn phím **`Tab`** (hoặc Enter). Bộ khung cơ bản sẽ hiện ra:
 
 ```html
 <!DOCTYPE html>
@@ -66,64 +74,82 @@ Ngày hôm nay, chúng ta **chỉ tập trung vào HTML** xây khung xương th�
 </html>
 ```
 
-**Giải thích siêu tốc:**
-* `<!DOCTYPE html>`: Nói cho máy tính biết đây là file HTML đời mới nhất (HTML5).
-* `<html> ... </html>`: Chứa toàn bộ nội dung trang web.
-* `<head> ... </head>`: Chứa các thông tin Cài đặt ẩn (Như bảng điều khiển não bộ), ví dụ cấu hình ngôn ngữ, thẻ `<title>` là Tựa đề hiện trên thẻ tab của Chrome.
-* `<body> ... </body>`: Đây là nơi chứa MỌI THỨ người dùng sẽ **nhìn thấy** (Thân hình). Chúng ta sẽ code toàn bộ thiệp điện tử VÀO GIỮA hai thẻ này.
+**Bóc tách cú pháp:**
+* `<!DOCTYPE html>`: Định nghĩa phiên bản HTML mới nhất.
+* `<html> ... </html>`: Thẻ gốc lớn nhất. (Nên đổi `lang="en"` thành `lang="vi"` để khai báo trang tiếng Việt).
+* `<head> ... </head>`: **Phần cài đặt ẩn**. Chứa các thiết lập không hiển thị ra màn hình như quy định cấu hình bảng mã UTF-8 (để gõ tiếng Việt).
+    * Thuộc tính `<title>` sẽ thay đổi cái tên nằm trên Tab của trình duyệt. (Hãy đổi "Document" thành "Thiệp Đặc Biệt").
+* `<body> ... </body>`: **Cơ thể Website**. TẤT CẢ mọi thành phần hiển thị trên màn hình (văn bản, hình ảnh, nút bấm) bắt buộc phải viết vào khoảng trống giữa 2 thẻ `<body>` này.
 
-Hãy đổi từ `Document` trong thẻ `<title>` thành `Thiệp Đặc Biệt`.
+### Bước 3: Hello World
+Thử viết một nội dung nho nhỏ vào giữa thẻ `<body>`:
 
-### Bước 3.4: Xem thành quả đầu tiên với Live Server
-* Nhấp chuột phải vào một vùng trống bất kỳ bên trong file `index.html` đang mở.
-* Chọn dòng **Open with Live Server**.
-* Ngay lập tức, trình duyệt của bạn sẽ tự động bật lên và hiển thị một trang trắng tinh. Nhìn lên tab trình duyệt, nó đã có tên "Thiệp Đặc Biệt". Cứ giữ nguyên đó nhé!
+```html
+<body>
+    <h1>Trang web đầu tiên của tôi</h1>
+    <p>Bắt đầu viết code thật sự thú vị!</p>
+</body>
+```
+*Ghi chú: Thẻ `<h1>` là tiêu đề to nhất, thẻ `<p>` là đoạn văn bản thường.*
+
+* **Lưu file:** Bấm `Ctrl + S`.
+* **Chạy thử:** Click chuột phải vào màn hình gõ code (vừa lưu), chọn **"Open with Live Server"**. Trình duyệt sẽ mở lên trang web trắng phau với các dòng chữ em vừa gõ!
 
 ---
 
-## 4. Bắt Tay Xây Dựng Khung Xương Tấm Thiệp
+## 💌 Hoàn Thiện: Xây Bộ Khung Xương Bao Thư
 
-Bây giờ ta sẽ chèn các cục gạch vào trong <body>. Chúng ta sẽ dùng thẻ `<div>` bổ sung vô số lần. `<div>` (division) giống như một cái **Hộp nhựa rỗng**, dùng để gom cụm và nhóm các đồ vật lại với nhau.
+Giờ hãy xóa đoạn "Hello World" đi, chúng ta bắt đầu dựng khung xương 1 tấm thiệp.
 
-Để phân biệt chiếc hộp này với chiếc hộp kia, ta dùng "Tên gọi" (Class) hoặc "Mã số CMT" (ID):
-* `class`: Một nhóm hộp có chung tính chất (như nhóm học sinh lớp 12A).
-* `id`: Chỉ một hộp duy nhất, không đụng hàng (như số báo danh).
+Trong HTML, thẻ chúng ta sẽ dùng nhiều nhất là **`<div>`** (Division).
+* `<div>` đóng vai trò như một chiếc **hộp carton rỗng**, dùng để phân chia khu vực và nhóm các phần tử lại với nhau.
+* Để cỗ máy tính nhận diện được đâu là hộp chứa nắp thư, đâu là hộp chứa bề mặt phong bì, ta cần gán **nhãn dán**.
+* Nhãn dán này gọi là **Class** (Lớp - Dùng cho nhiều yếu tố) hoặc **ID** (Định danh - Chỉ có một cái duy nhất tồn tại).
 
-Hãy COPY đoạn code dưới đây vào **giữa khoảng trống của thẻ `<body>` và `</body>`** và bấm Lưu File (`Ctrl + S` / `Cmd + S`):
+Dưới đây là sơ đồ sắp xếp các hộp carton tạo nên cấu trúc phong bì thư. Em hãy gõ (hoặc copy) chính xác vào khoảng trống giữa thẻ `<body>` và `</body>`:
 
 ```html
-    <!-- Khu vực bọc ngoài tất cả (Làm lớp vỏ Tổng) -->
+<body>
+    <!-- Lớp vỏ Bọc Tổng (id="envelope" định danh duy nhất cho nguyên tấm thiệp) -->
     <div class="envelope-wrapper" id="envelope">
 
-        <!-- 1. Mặt sau bao thư (Lót dưới cùng) -->
+        <!-- Lớp 1: Mặt sau của bao thư (Tấm lót dưới cùng) -->
         <div class="envelope-back envelope-part"></div>
 
-        <!-- 2. Lá thư trắng chứa nội dung lời chúc -->
+        <!-- Lớp 2: Tờ lá thư (Chứa văn bản, nằm kẹp ở giữa) -->
         <div class="letter">
             <div class="text-content">
-                <h2>Gửi người đặc biệt! 💌</h2>
-                <p>Bây giờ lá thư đã lộ diện. Chúc bạn một ngày thật rực rỡ và muôn vàn hạnh phúc!</p>
+                <h2>Gửi người đặc biệt nhất! 💌</h2>
+                <p>Bất ngờ chưa, nắp thư đã lật mở rồi nè. Chúc cậu một ngày thật rực rỡ và muôn vàn hạnh phúc đang chờ đón phía trước nhé!</p>
             </div>
         </div>
 
-        <!-- 3. Mặt trước bao thư (Gắn lên che lá thư lại) -->
+        <!-- Lớp 3: Mặt trước của phong bì (Gắn đè lên để che lá thư lại) -->
         <div class="envelope-front envelope-part"></div>
 
-        <!-- 4. Nắp đậy bao thư có biểu tượng sáp -->
+        <!-- Lớp 4: Cái nắp tam giác của phong bì (Nằm trên cùng) -->
         <div class="envelope-flap envelope-part">
+            <!-- Con dấu sáp đỏ dán đè lên nắp -->
             <div class="wax-seal">❤️</div>
         </div>
 
     </div>
+</body>
 ```
+*(Lưu ý: Các dòng nằm giữa `<!--` và `-->` là comments. Nó giúp lập trình viên ghi chú lại mã nguồn cho dễ đọc, hệ thống sẽ bỏ qua đoạn này và không hiển thị nó ra ngoài trình duyệt).*
 
-*(Mẹo: Bất kì dòng nào bị kẹp giữa `<!--` và `-->` là Dòng Ghi Chú, nó giúp bạn dễ đọc lệnh, máy tính sẽ bỏ qua không dịch nó ra màn hình).*
+---
 
-### 5. Kết quả Ngày 1
+### 🎉 Tổng kết Ngày 1:
 
-Hãy bật trình duyệt lên xem (nhờ có Live Server, trang đã tự làm mới lại rồi).
-Trông nó... rất xấu! 😂 Chỉ có mỗi 2 dòng chữ trắng bóc và chữ màu đen đè lên nhau, và trái tim lạc lõng.
+Em hãy bấm `Ctrl + S` lưu lại và quan sát kết quả trên Live Server ở trình duyệt.
 
-**Đừng lo lắng!** Đây là chuyện RẤT BÌNH THƯỜNG. Máy tính chỉ mới biết bạn đang tạo ra những cái Hộp rỗng (thẻ div) và một vài dòng text, ta chưa dạy nó hộp nào màu gì, to nhỏ ra sao.
+> [!IMPORTANT]
+> **Nhắc lại một lần nữa:** Bất cứ khi nào em chỉnh sửa dù chỉ một dấu chấm, hãy luôn nhớ nhấn **Ctrl + S** (Windows) hoặc **Cmd + S** (Mac). Live Server giống như một người đưa thư, nếu em chưa "đóng gói và dán băng keo" (Lưu file) thì người đưa thư sẽ không biết có hàng mới để chuyển đi đâu!
 
-Khung xương của chúng ta đã hoàn chỉnh vững chắc! Hẹn gặp lại bạn vào Ngày 2: Khoác chiếc áo lộng lẫy lên với CSS!
+Mọi thứ lúc này trông chỉ toàn là chữ đen trắng xếp chồng chéo lên nhau, cái cần thì không thấy, cái không cần lại chình ình góc trái.
+👉 **Điều này hoàn toàn chính xác!** Vì chúng ta mới chỉ tạo ra các HỘP RỖNG vô hình và nhập văn bản text thô (HTML). Hôm nay máy tính chưa được em chỉ dạy xem cái hộp nào có màu đỏ, nẩy kích thước dài rộng bao nhiêu.
+
+Phần xương cốt đã dựng xong cực kỳ chuẩn chỉ! Ở buổi Ngày 2, em sẽ học cách dùng ma thuật có tên là **CSS** để gọt rũa các thẻ `div` này thành hình đa giác, biến chúng thành một chiếc phong bì lấp lánh có màu sắc thực sự.
+
+Nghỉ ngơi chút nhé, ngày 1 qua xuất sắc!
