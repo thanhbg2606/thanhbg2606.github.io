@@ -1,0 +1,54 @@
+/* Nền tảng trang web */
+body {
+    background: linear-gradient(-45deg, #fdfbfb, #ebedee, #f08092, #fdfbfb);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ================== HIỆU ỨNG NỀN ================== */
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.heart-particle {
+    position: absolute;
+    bottom: -20px;
+    width: 20px;
+    height: 20px;
+    background: rgba(240, 128, 146, 0.3);
+    clip-path: polygon(50% 15%, 61% 2%, 80% 2%, 100% 20%, 100% 40%, 80% 70%, 50% 95%, 20% 70%, 0% 40%, 0% 20%, 20% 2%, 39% 2%);
+    animation: floating 8s infinite linear;
+}
+
+.heart-particle:nth-child(1) { left: 10%; animation-duration: 7s; animation-delay: 0s; }
+.heart-particle:nth-child(2) { left: 25%; animation-duration: 10s; animation-delay: 2s; }
+.heart-particle:nth-child(3) { left: 45%; animation-duration: 8s; animation-delay: 4s; }
+.heart-particle:nth-child(4) { left: 65%; animation-duration: 12s; animation-delay: 1s; }
+.heart-particle:nth-child(5) { left: 80%; animation-duration: 9s; animation-delay: 3s; }
+.heart-particle:nth-child(6) { left: 90%; animation-duration: 11s; animation-delay: 5s; }
+
+@keyframes floating {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}

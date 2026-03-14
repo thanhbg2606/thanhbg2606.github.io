@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Điện Tử Hoàn Hảo</title>
+    <!-- CSS Modularized -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/envelope.css">
+    <link rel="stylesheet" href="css/lesson.css">
+</head>
+
+<body>
+    <!-- Hiệu ứng nền bong bóng/trái tim -->
+    <div class="bg-animation">
+        <div class="heart-particle"></div>
+        <div class="heart-particle"></div>
+        <div class="heart-particle"></div>
+        <div class="heart-particle"></div>
+        <div class="heart-particle"></div>
+        <div class="heart-particle"></div>
+    </div>
+
+    <!-- Menu Hamburger -->
+    <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Sidebar danh sách bài học -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Lộ trình 10 Ngày</h3>
+        </div>
+        <ul class="lesson-list">
+            <li><a href="#" onclick="loadLesson('day1')">Ngày 1: Nhập môn</a></li>
+            <li><a href="#" onclick="loadLesson('day2')">Ngày 2: Biến & Kiểu dữ liệu</a></li>
+            <li><a href="#" onclick="loadLesson('day3')">Ngày 3: Cấu trúc điều kiện</a></li>
+            <li><a href="#" onclick="loadLesson('day4')">Ngày 4: Vòng lặp</a></li>
+            <li><a href="#" onclick="loadLesson('day5')">Ngày 5: Hàm (Functions)</a></li>
+            <li><a href="#" onclick="loadLesson('day6')">Ngày 6: Mảng (Arrays)</a></li>
+            <li><a href="#" onclick="loadLesson('day7')">Ngày 7: Đối tượng (Objects)</a></li>
+            <li><a href="#" onclick="loadLesson('day8')">Ngày 8: DOM Manipulation</a></li>
+            <li><a href="#" onclick="loadLesson('day9')">Ngày 9: Xử lý sự kiện</a></li>
+            <li><a href="#" onclick="loadLesson('day10')">Ngày 10: Dự án cuối khóa</a></li>
+        </ul>
+    </nav>
+
+    <!-- Khu vực hiển thị nội dung bài học -->
+    <div id="lessonViewer" class="lesson-viewer">
+        <div class="close-viewer" id="closeViewer">&times;</div>
+        <div id="lessonContent" class="markdown-body">
+            <!-- Nội dung Markdown sẽ hiển thị ở đây -->
+        </div>
+    </div>
+
+    <!-- Tấm thiệp (Envelope) -->
+    <div class="envelope-wrapper" id="envelope">
+        <!-- ... (giữ nguyên cấu trúc cũ) ... -->
+
+        <div class="envelope-back envelope-part"></div>
+
+        <div class="letter">
+            <div class="text-content">
+                <h2>Gửi người đặc biệt! 💌</h2>
+                <p>Bây giờ lá thư đã mở ra hoàn toàn và vỏ bao thư đã biến mất. Lời chúc từ từ hiện lên một cách rõ nét
+                    và bất ngờ nhất. Chúc bạn một ngày thật rực rỡ và hạnh phúc!</p>
+            </div>
+        </div>
+
+        <div class="envelope-front envelope-part"></div>
+
+        <div class="envelope-flap envelope-part">
+            <div class="wax-seal">❤️</div>
+        </div>
+
+    </div>
+
+    <audio id="background-music" loop>
+        <source src="/audio/a.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- JS Modularized -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="js/envelope.js"></script>
+    <script src="js/lesson.js"></script>
+</body>
+
+</html>

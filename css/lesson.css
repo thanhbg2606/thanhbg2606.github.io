@@ -1,0 +1,192 @@
+/* ================== MENU & SIDEBAR ================== */
+.menu-toggle {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  width: 35px;
+  height: 24px;
+  z-index: 1000;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #d46b7a;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.05);
+  padding: 80px 20px 20px;
+  box-sizing: border-box;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-header h3 {
+  color: #d46b7a;
+  border-bottom: 2px solid #f08092;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.lesson-list {
+  list-style: none;
+  padding: 0;
+}
+
+.lesson-list li {
+  margin-bottom: 10px;
+}
+
+.lesson-list li a {
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.lesson-list li a:hover {
+  background: #f08092;
+  color: white;
+}
+
+/* ================== LESSON VIEWER ================== */
+.lesson-viewer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 80%;
+  height: 80%;
+  background: white;
+  z-index: 2000;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lesson-viewer.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.close-viewer {
+  position: sticky;
+  top: 0;
+  float: right;
+  font-size: 40px;
+  cursor: pointer;
+  color: #999;
+  line-height: 1;
+}
+
+.close-viewer:hover {
+  color: #d46b7a;
+}
+
+/* Định dạng Markdown */
+.markdown-body {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.markdown-body h1 {
+  color: #d46b7a;
+  margin-top: 0;
+}
+
+.markdown-body h2 {
+  color: #e67385;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.markdown-body pre {
+  background: #f6f8fa;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid #ddd;
+}
+
+.markdown-body code {
+  font-family: 'Consolas', monospace;
+  color: #c7254e;
+  background: #f9f2f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+/* Tối ưu Mobile Lesson Support */
+@media (max-width: 768px) {
+  .menu-toggle {
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 22px;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  .sidebar {
+    width: 260px;
+    left: -260px;
+  }
+
+  .lesson-viewer {
+    width: 95%;
+    height: 90%;
+    padding: 25px 15px;
+    border-radius: 15px;
+  }
+
+  .markdown-body {
+    font-size: 16px;
+  }
+}
